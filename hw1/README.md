@@ -1,11 +1,13 @@
 Q1:
 (base) almaz@Almazyans-MacBook-Pro hw1 % docker run -it --entrypoint=bash python:3.12.8
 root@6f2078056fc7:/# pip --version
-pip 24.3.1 from /usr/local/lib/python3.12/site-packages/pip (python 3.12)
+
+Answer: pip 24.3.1 from /usr/local/lib/python3.12/site-packages/pip (python 3.12)
 -------------------------
 
 Q2:
-postgres:5432
+
+Answer: postgres:5432
 -------------------------
 
 Q3:
@@ -84,5 +86,7 @@ Answer: JFK Airport
 -------------------------
 
 Q7:
+
+Answer: terraform init, terraform apply -auto-approve, terraform destroy
 -------------------------
 
