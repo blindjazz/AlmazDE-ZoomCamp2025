@@ -1,4 +1,5 @@
 Q1:
+
 (base) almaz@Almazyans-MacBook-Pro hw1 % docker run -it --entrypoint=bash python:3.12.8
 root@6f2078056fc7:/# pip --version
 
@@ -11,6 +12,7 @@ Answer: postgres:5432
 -------------------------
 
 Q3:
+
 SQL script:
 select
 	count(case when trip_distance <= 1 then 1 end) as up_to_1_mile,
@@ -27,6 +29,7 @@ Answer: 104,802; 198,924; 109,603; 27,678; 35,189
 -------------------------
 
 Q4:
+
 SQL script:
 with cte as 
 	(select
@@ -48,6 +51,7 @@ Answer: 2019-10-11
 -------------------------
 
 Q5:
+
 SQL script:
 select
 	array_to_string(array(
@@ -64,6 +68,7 @@ Answer: East Harlem North, East Harlem South, Morningside Heights
 -------------------------
 
 Q6:
+
 SQL script:
 select
 	b."Zone"
