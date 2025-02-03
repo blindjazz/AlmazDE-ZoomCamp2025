@@ -1,0 +1,12 @@
+id: getting_started3
+namespace: dev_home
+
+inputs:
+  - id: api_url
+    type: STRING
+    defaults: https://dummyjson.com/products
+
+tasks:
+  - id: api
+    type: io.kestra.plugin.core.http.Request
+    uri: "{{ inputs.api_url }}"

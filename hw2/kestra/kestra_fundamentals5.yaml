@@ -1,0 +1,27 @@
+id: getting_started_output
+namespace: company.team
+
+inputs:
+  - id: api_url
+    type: STRING
+    defaults: https://dummyjson.com/products
+
+tasks:
+  - id: api
+    type: io.kestra.plugin.core.http.Request
+    uri: "{{ inputs.api_url }}"
+
+  - id: python
+    type: io.kestra.plugin.scripts.python.Script
+    containerImage: python:slim
+    beforeCommands:
+      - pip install polars
+    warningOnStdErr: false
+    outputFiles:
+      - "products.csv"
+    script: |
+      import polars as pl
+      data = {{outputs.api.body | jq('.products') | first}}
+      df = pl.from_dicts(data)
+      df.glimpse()
+      df.select(["brand", "price"]).write_csv("products.csv")

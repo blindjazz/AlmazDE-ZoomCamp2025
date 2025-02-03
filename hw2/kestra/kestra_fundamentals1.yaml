@@ -1,0 +1,6 @@
+id: getting_started
+namespace: dev_home
+tasks:
+  - id: hello_world
+    type: io.kestra.plugin.core.log.Log
+    message: Hello World! 🚀
