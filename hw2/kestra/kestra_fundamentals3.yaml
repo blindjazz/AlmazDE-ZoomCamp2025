@@ -1,0 +1,12 @@
+id: inputs_demo
+namespace: dev_home
+
+inputs:
+  - id: user
+    type: STRING
+    defaults: Almazyanskiy
+
+tasks:
+  - id: hello
+    type: io.kestra.plugin.core.log.Log
+    message: Hey there, {{ inputs.user }}
