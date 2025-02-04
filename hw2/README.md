@@ -10,6 +10,8 @@ used kestra/postgres_taxi.yaml file in Kestra, commented purge_files Task...
 
 ...and ran yellow_tripdata_2020-12 CSV loading
 
+![q1 answer](/pics/q1.png)
+
 > ANSWER: 128.3 MB
 
 --------------------
